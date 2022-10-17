@@ -1,0 +1,437 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: ubuntu;
+}
+:root{
+    --user-symbol: url('./Images/Cross-hover.svg');
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a2a33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: page-appear 0.5s;
+}
+
+@keyframes page-appear{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+nav{
+    margin-top: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#game-turn{
+    width: 210px;
+    height: 60px;
+    font-size: 1.2rem;
+    color: #9880ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#1f3641;
+    border-radius: 15px;
+    box-shadow: 00px 5px  #10212a ;
+}
+#game-turn img{
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+nav button{
+    cursor: pointer;
+    border-radius: 12px;
+    padding-top: 5px;
+    width: 55px;
+    height: 55px;
+    background-color: #a8bfc9;
+    border: 1px solid #a8bfc9;
+    box-shadow:0px 4px  #6b8997;
+}
+nav button:hover{
+    background-color: #dbe8ed;
+}
+nav button img{
+    width: 25px;
+    height: 25px;
+}
+
+#restart-panel{
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.restart-container{
+    position: absolute;
+    top: 32%;
+    z-index: 3;
+    width: 100vw;
+    height: 300px;
+    background-color: #1f3641;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: search-player 0.5s ease-in-out;
+}
+.restart-container h1{
+    color: #9880ff;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+.restart-container button{
+    cursor: pointer;
+    margin: 20px 10px;
+    width: 140px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.restart-container button:nth-child(1){
+    color: #1a2a33;
+    background-color: #9880ff;
+    border: 1px solid #9880ff;
+    box-shadow: 0px 5px #5844b5;
+}
+.restart-container button:nth-child(1):hover{
+    background-color: #c2b5f9;
+}
+.restart-container button:nth-child(2){
+    color: #1a2a33;
+    background-color: #f2b137;
+    border: 1px solid #f2b137;
+    box-shadow: 0px 5px #c08a25;
+}
+.restart-container button:nth-child(2):hover{
+    background-color: #f5cd82;
+}
+#restart-panel::before{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    background-color: black;
+    opacity: 0.69;
+}
+
+
+#selection-area{
+    margin-top: 30px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+#selection-area button{
+    width: 180px;
+    height: 180px;
+    border-radius:15px;
+    background-color: #1f3641;
+    border: 1px solid #1f3641;
+    box-shadow: 0px 8px #10212a;
+    cursor: pointer;
+}
+.hover-img{
+    width: 100px;
+    height: 100px;
+}
+#selection-area button:hover{
+    background-image: var(--user-symbol);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    animation: hover-btn 0.35s;
+}
+
+@keyframes hover-btn{
+    from{
+        background-size: 0px;
+    }
+    to{
+        background-size: 100px;
+    }
+}
+
+.choosed-btn{
+    width: 100px;
+    height: 100px;
+}
+
+#display-score{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+#display-score div{
+    color: #1f3641;
+    width: 180px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+#player-score{
+    background-color: #31c3bd;
+}
+#ties-score{
+    background-color:#9880ff ;
+}
+#cpu-score{
+    background-color:#f2b137 ;
+}
+
+#opponent-chance{
+    width: 600px;
+    margin-bottom: 20px;
+    color: #9880ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#opponent-chance h2{
+    margin-right: 30px;
+}
+
+#result{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+#result::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.69;
+}
+.result-container{
+    position: absolute;
+    top: 32%;
+    z-index: 2;
+    color: #9880ff;
+    width: 100vw;
+    height: 350px;
+    background-color: #1f3641;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: search-player 0.5s ease-in-out;
+}
+.result-container h3{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.result-declaration{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+.result-declaration h1{
+    font-weight: 500;
+    margin-left: 20px;
+    color: #31c3bd;
+}
+
+.result-buttons button{
+    cursor: pointer;
+    width: 120px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    background-color: #9880ff;
+    border: 1px solid #9880ff;
+    box-shadow: 0px 5px #5844b5;
+    color: #1a2a33;
+    font-weight: 500;
+}
+.result-quit:hover{
+    background-color: #c4b7fb;
+}
+.result-buttons :nth-child(2){
+    width: 180px;
+    background-color: #f2b137;
+    border: 1px solid #f2b137;
+    box-shadow:0px 5px #c08a25;
+}
+
+.result-next:hover{
+    background-color: #f5cd82;
+}
+
+@keyframes search-player{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 32%;
+    }
+}
+@keyframes closing{
+    0%{
+        top: 32%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+/* Utility classes */
+.primary-logo{
+    width: 45px;
+    height: 45px;
+}
+.primary-font-size{
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+/* Dot Pulse animation */
+.dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    box-shadow: 9999px 0 0 -5px #9880ff;
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: .25s;
+  }
+  
+  .dot-pulse::before, .dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+  }
+  
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px #9880ff;
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px #9880ff;
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
+  }
+  
+  @keyframes dotPulseBefore {
+    0% {
+      box-shadow: 9984px 0 0 -5px #9880ff;
+    }
+    30% {
+      box-shadow: 9984px 0 0 2px #9880ff;
+    }
+    60%,
+    100% {
+      box-shadow: 9984px 0 0 -5px #9880ff;
+    }
+  }
+  
+  @keyframes dotPulse {
+    0% {
+      box-shadow: 9999px 0 0 -5px #9880ff;
+    }
+    30% {
+      box-shadow: 9999px 0 0 2px #9880ff;
+    }
+    60%,
+    100% {
+      box-shadow: 9999px 0 0 -5px #9880ff;
+    }
+  }
+  
+  @keyframes dotPulseAfter {
+    0% {
+      box-shadow: 10014px 0 0 -5px #9880ff;
+    }
+    30% {
+      box-shadow: 10014px 0 0 2px #9880ff;
+    }
+    60%,
+    100% {
+      box-shadow: 10014px 0 0 -5px #9880ff;
+    }
+  }

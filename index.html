@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik Tak Toe</title>
+    <link id="style-sheet" rel="stylesheet" href="style1.css">
+    <link rel="stylesheet"media = "only screen and (max-width : 1200px) and (min-width : 700px) " href="large.css">
+    <link rel="stylesheet"media = "only screen and (max-width : 700px) and (min-width : 450px) " href="small.css">
+    <link rel="stylesheet"media = "only screen and (max-width : 450px)" href="verysmall.css">
+    
+</head>
+<body>
+
+    <section id="page1">
+
+        <nav id="navigation">
+            <div class="logo">
+                <img class="primary-logo" src="./Images/Cross-logo.svg" alt="">
+                <img class="primary-logo" src="./Images/Circle-logo.svg" alt="">
+            </div>
+        </nav>
+
+        <section id="option-area">
+            <h2 class="primary-heading">PICK PLAYER 1'S MARK</h2>
+            <div>
+                <button data-choosed="cross" class="option-cross">
+                    <img class="primary-logo" src="./Images/Cross-dark.svg" alt="">
+                </button> 
+                <button data-choosed="circle" class="option-circle">
+                    <img class="primary-logo" src="./Images/Circle-light.svg" alt="">
+                </button>
+            </div>
+            <h2>REMEMBER : X GOES FIRST</h2>            
+        </section>
+
+        <section id="playing-type">
+            <button id="vs-cpu" class="orange">NEW GAME (VS CPU)</button>
+            <button id="vs-player" class="blue">NEW GAME (VS PLAYER)</button>
+        </section>
+
+        <section id="pvp">
+            <div id="pvp-container">
+                <div id="pvp-box">
+                    <h2>Searching For Opponents</h2>
+                    <div class="dot-pulse"></div>
+                </div>
+                <button class="search-close">CANCEL</button>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="page2">
+
+        <nav id="nav">
+            <div  id="game-logo">
+                <img class="primary-logo" src="./Images/Cross-logo.svg" alt="">
+                <img class="primary-logo" src="./Images/Circle-logo.svg" alt="">
+            </div>
+
+            <div id="game-turn">
+                <img id="whose-turn" src="./Images/Cross-light.svg" alt="">
+                <h2>TURN</h2>
+            </div>
+
+            <button id="restart"><img  src="./Images/Restart.svg" alt=""></button>
+        </nav>
+
+        <section id="restart-panel">
+            <div class="restart-container">
+                <h1>Restart Game</h1>
+                <div>
+                    <button id="cancel-btn">Cancel</button>
+                    <button id="restart-btn">Restart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="selection-area">
+            <button id="option1"></button>
+            <button id="option2"></button>
+            <button id="option3"></button>
+            <button id="option4"></button>
+            <button id="option5"></button>
+            <button id="option6"></button>
+            <button id="option7"></button>
+            <button id="option8"></button>
+            <button id="option9"></button>
+        </section>
+
+        <section id="display-score">
+            <div id="player-score">
+                <h3>YOU</h3>
+                <p class="primary-font-size">0</p>
+            </div>
+            <div id="ties-score">
+                <h3>TIES</h3>
+                <p class="primary-font-size">0</p>
+            </div>
+            <div id="cpu-score">
+                <h3>CPU</h3>
+                <p class="primary-font-size">0</p>
+            </div>
+        </section>
+
+        <div id="opponent-chance">
+            <h2>Your Opponent is Thinking</h2>
+            <div class="dot-pulse"></div>
+        </div>
+
+        <section id="result">
+            <div class="result-container">
+                <h3>You Won!</h3>
+                <div class="result-declaration">
+                    <img src="./Images/Cross-logo.svg" alt="">
+                    <h1>Takes the Round</h1>
+                </div>
+                <div class="result-buttons">
+                    <button class="result-quit">QUIT</button>
+                    <button class="result-next">NEXT ROUND</button>
+                </div>
+    
+            </div>
+        </section>
+
+    </section>
+
+
+</body>
+<script src="./script.js"></script>
+</html>

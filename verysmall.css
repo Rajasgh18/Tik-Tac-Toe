@@ -1,0 +1,209 @@
+#navigation{
+    margin-top: 50px;
+    margin-bottom:10px;
+}
+#option-area{
+    width: 200px;
+    height: 100px;
+    border-radius: 6px;
+    box-shadow: 0px 3px #10212a;
+}
+#option-area > div{
+    width: 175px;
+    height: 30px;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+#option-area > div::before{
+    width: 88px;
+    height: 30px;
+    margin-right: 12px;
+    border-radius: 5px;
+    transform: translateX(var(--sliding-translate));
+}
+#option-area button{
+    width: 85px;
+    padding: 2px;
+    border-radius: 6px;
+}
+#option-area:nth-child(2){
+    font-size: 0.5rem;
+}
+#playing-type{
+    margin-top: 20px;
+    width: 200px;
+}
+#playing-type button{
+    width: 200px;
+    font-weight: 500;
+    height: 30px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#pvp-container{
+    height: 150px;
+}
+#pvp-box h2{ 
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#pvp-container button{
+    margin-top: 15px;
+    width: 60px;
+    padding: 3px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    box-shadow: 0px 3px #6554b0;
+}
+
+/* Utility classes */
+.primary-heading{
+    font-size: 0.7rem;
+}
+.primary-logo{
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+}
+.orange{
+    box-shadow: 0px 2px #cc8b13;
+}
+
+.blue{
+    box-shadow: 0px 2px #259591 ;
+}
+
+/* ------Page2------ */
+#nav{
+    width: 200px;
+}
+#game-turn{
+    height: 25px;
+    width: 80px;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    box-shadow: 0px 3px  #10212a
+}
+#game-turn img{
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+}
+#nav button{
+    padding-top: 2px;
+    border-radius: 5px;
+    width: 25px;
+    height: 23px;
+    box-shadow:0px 2px  #6b8997;
+}
+#nav button img{
+    height: 12px;
+    width: 12px;
+}
+
+.restart-container{
+    height: 120px;
+}
+.restart-container h1{
+    font-size: 1.8rem;
+}
+.restart-container button{
+    width: 70px;
+    padding: 3px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    font-weight: 400;
+    margin: 10px 5px;
+}
+.restart-container button:nth-child(1){
+    box-shadow: 0px 2px #5844b5;
+}
+.restart-container button:nth-child(2){
+    box-shadow: 0px 2px #c08a25;
+}
+
+#selection-area{
+    margin-top: 20px;
+    width: 200px;
+    gap: 0.8rem;
+}
+#selection-area button{
+    width: 59px;
+    height: 59px;
+    border-radius: 5px;
+    box-shadow: 0px 3px #10212a;
+}
+#selection-area button:hover{
+    background-size: 30px;
+}
+.hover-img{
+    width: 30px;
+    height: 30px;
+}
+@keyframes hover-btn{
+    from{
+        background-size: 0px;
+    }
+    to{
+        background-size: 30px;
+    }
+}
+
+#display-score{
+    margin: 15px;
+    width: 200px;
+    gap: 0.8rem;
+}
+#display-score div{
+    width: 59px;
+    height: 30px;
+    border-radius: 5px;
+}
+#display-score div h3{
+    font-size: 0.7rem;
+}
+#opponent-chance h2{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.result-container{
+    height: 150px;
+}
+.result-container h3{
+    font-size: 1rem;
+}
+.result-declaration{
+    margin-top: 10px;
+}
+.result-declaration h1{
+    font-size: 1.7rem;
+    margin-left: 10px;
+}
+.result-declaration img{
+    width: 28px;
+    height: 28px;
+}
+.result-buttons{
+    margin-top: -12px;
+}
+.result-buttons button{
+    width: 50px;
+    padding:4px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0px 2px #5844b5;
+}
+.result-buttons :nth-child(2){
+    width: 90px;
+    box-shadow: 0px 2px #c08a25;
+}
+
+/* Utility classes */
+.primary-font-size{
+    font-size: 0.8rem;
+}

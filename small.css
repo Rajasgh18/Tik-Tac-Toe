@@ -1,0 +1,206 @@
+/* ------Page1------ */
+#navigation{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+#option-area{
+    width: 300px;
+    height: 120px;
+    border-radius: 6px;
+    box-shadow: 0px 4px #10212a;
+}
+#option-area > div{
+    width: 270px;
+    height: 50px;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+#option-area > div::before{
+    width: 133px;
+    height: 43px;
+    border-radius: 7px;
+    margin-left: 2px;
+    transform: translateX(var(--sliding-translate));
+}
+#option-area button{
+    width: 130px;
+    padding: 5px;
+    border-radius: 6px;
+}
+#option-area:nth-child(2){
+    font-size: 0.5rem;
+}
+
+#playing-type{
+    margin-top: 20px;
+    width: 300px;
+}
+#playing-type button{
+    font-weight: 500;
+    width: 300px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+#pvp-container{
+    height: 150px;
+}
+#pvp-box h2{ 
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#pvp-container button{
+    margin-top: 15px;
+    width: 80px;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0px 3px #6554b0;
+}
+/* Utility classes */
+.primary-heading{
+    font-size: 0.9rem;
+}
+.primary-logo{
+    height: 25px;
+    width: 25px;
+    margin: 1px;
+}
+.orange{
+    box-shadow: 0px 4px #cc8b13;
+}
+
+.blue{
+    box-shadow: 0px 4px #259591 ;
+}
+
+/* ------Page2------ */
+#nav{
+    width: 300px;
+}
+#game-turn{
+    height: 35px;
+    width: 120px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    box-shadow: 00px 4px  #10212a
+}
+#game-turn img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+#nav button{
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+    box-shadow:0px 3px  #6b8997;
+}
+#nav button img{
+    height: 15px;
+    width: 15px;
+}
+.restart-container{
+    height: 150px;
+}
+.restart-container h1{
+    font-size: 2.2rem;
+}
+.restart-container button{
+    width: 100px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 400;
+    margin: 10px 5px;
+}
+.restart-container button:nth-child(1){
+    box-shadow: 0px 3px #5844b5;
+}
+.restart-container button:nth-child(2){
+    box-shadow: 0px 3px #c08a25;
+}
+#selection-area{
+    margin-top: 20px;
+    width: 300px;
+    gap: 1rem;
+}
+#selection-area button{
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    box-shadow: 0px 4px #10212a;
+}
+#selection-area button:hover{
+    background-size: 50px;
+}
+.hover-img{
+    width: 50px;
+    height: 50px;
+}
+@keyframes hover-btn{
+    from{
+        background-size: 0px;
+    }
+    to{
+        background-size: 50px;
+    }
+}
+
+#display-score{
+    margin: 15px;
+    width: 300px;
+    gap: 1rem;
+}
+#display-score div{
+    width: 90px;
+    height: 40px;
+    border-radius: 7px;
+}
+#display-score div h3{
+    font-size: 0.8rem;
+}
+#opponent-chance h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.result-container{
+    height: 180px;
+}
+.result-container h3{
+    font-size: 1.3rem;
+}
+.result-declaration{
+    margin-top: 10px;
+}
+.result-declaration h1{
+    font-size: 2.1rem;
+    margin-left: 10px;
+}
+.result-declaration img{
+    width: 35px;
+    height: 35px;
+}
+.result-buttons{
+    margin-top: -12px;
+}
+.result-buttons button{
+    width: 60px;
+    padding:5px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-radius: 6px;
+    margin: 6px;
+    box-shadow: 0px 3px #5844b5;
+}
+.result-buttons :nth-child(2){
+    width: 110px;
+    box-shadow: 0px 3px #c08a25;
+}
+/* Utility classes */
+.primary-font-size{
+    font-size: 1rem;
+}

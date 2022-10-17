@@ -1,0 +1,179 @@
+/* --------Page1------ */
+#option-area{
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 6px #10212a;
+}
+#option-area > div{
+    width: 450px;
+    height: 80px;
+}
+#option-area > div::before{
+    width: 218px;
+    height: 65px;
+    margin-right: 220px;
+    transform: translateX(var(--sliding-translate));
+}
+#option-area button{
+    width: 218px;
+    padding: 8px;
+}
+#option-area:nth-child(2){
+    font-size: 0.8rem;
+}
+
+#playing-type button{
+    width: 500px;
+    height: 60px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+#pvp-container{
+    height: 200px;
+}
+#pvp-box{
+    font-size: 1.2rem;
+}
+#pvp-container button{
+    width: 100px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px #6554b0;
+}
+
+/* Utility classes */
+.primary-heading{
+    font-size: 1.2rem;
+}
+.primary-logo{
+    height: 35px;
+    width: 35px;
+    margin: 3px;
+}
+.orange{
+    box-shadow: 0px 5px #cc8b13;
+}
+
+.blue{
+    box-shadow: 0px 5px #259591 ;
+}
+
+/* ------Page2------ */
+#nav{
+    width: 400px;
+}
+#game-turn{
+    height: 50px;
+    width: 150px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+#game-turn img{
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+#nav button{
+    border-radius: 10px;
+    width: 50px;
+    height: 48px;
+}
+#nav button img{
+    height: 20px;
+    width: 20px;
+}
+#selection-area{
+    width: 400px;
+    gap: 1.2rem;
+}
+#selection-area button{
+    width: 122px;
+    height: 122px;
+    border-radius: 10px;
+    box-shadow: 0px 6px #10212a;
+}
+#selection-area button:hover{
+    background-size: 70px;
+}
+@keyframes hover-btn{
+    from{
+        background-size: 0px;
+    }
+    to{
+        background-size: 70px;
+    }
+}
+.hover-img{
+    width: 60px;
+    height: 60px;
+}
+#display-score{
+    margin-top: 20px;
+    width: 400px;
+    gap: 1.2rem;
+}
+#display-score div{
+    width: 122px;
+    height: 60px;
+    border-radius: 10px;
+}
+#display-score div h3{
+    font-size: 1rem;
+}
+#opponent-chance h2{
+    font-size: 1.2rem;
+}
+.restart-container{
+    height: 200px;
+}
+.restart-container h1{
+    font-size: 2.5rem;
+}
+.restart-container button{
+    width: 120px;
+    padding: 6px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-weight: 400;
+    margin: 10px 5px;
+}
+.restart-container button:nth-child(1){
+    box-shadow: 0px 3px #5844b5;
+}
+.restart-container button:nth-child(2){
+    box-shadow: 0px 3px #c08a25;
+}
+.result-container{
+    height: 230px;
+}
+.result-container h3{
+    font-size: 1.5rem;
+}
+.result-declaration h1{
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+.result-declaration img{
+    width: 35px;
+    height: 35px;
+}
+.result-buttons button{
+    width: 80px;
+    padding:8px;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 8px;
+    margin: 6px;
+    box-shadow: 0px 4px #5844b5;
+}
+.result-buttons :nth-child(2){
+    width: 140px;
+    box-shadow: 0px 4px #c08a25;
+}
+
+/* Utility classes */
+.primary-font-size{
+    font-size: 1.2rem;
+}
