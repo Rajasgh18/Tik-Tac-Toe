@@ -1,8 +1,11 @@
 /* ------Page1------ */
+/* ----------Logo---------- */
 #navigation{
     margin-top: 100px;
     margin-bottom: 20px;
 }
+
+/* ----------Choosing Area---------- */
 #option-area{
     width: 300px;
     height: 120px;
@@ -31,6 +34,7 @@
     font-size: 0.5rem;
 }
 
+/* ----------Playing Type---------- */
 #playing-type{
     margin-top: 20px;
     width: 300px;
@@ -44,6 +48,7 @@
     margin-bottom: 20px;
 }
 
+/* ----------Searching For Players---------- */
 #pvp-container{
     height: 150px;
 }
@@ -59,7 +64,7 @@
     border-radius: 6px;
     box-shadow: 0px 3px #6554b0;
 }
-/* Utility classes */
+/* ----------Utility classes for Page 1---------- */
 .primary-heading{
     font-size: 0.9rem;
 }
@@ -71,12 +76,12 @@
 .orange{
     box-shadow: 0px 4px #cc8b13;
 }
-
 .blue{
     box-shadow: 0px 4px #259591 ;
 }
 
-/* ------Page2------ */
+/* ----------Page2---------- */
+/* ----------Navigation Bar---------- */
 #nav{
     width: 300px;
 }
@@ -102,6 +107,8 @@
     height: 15px;
     width: 15px;
 }
+
+/* ----------Restart Area---------- */
 .restart-container{
     height: 150px;
 }
@@ -122,6 +129,8 @@
 .restart-container button:nth-child(2){
     box-shadow: 0px 3px #c08a25;
 }
+
+/* ----------Main Game Area---------- */
 #selection-area{
     margin-top: 20px;
     width: 300px;
@@ -149,6 +158,7 @@
     }
 }
 
+/* ----------Score Board---------- */
 #display-score{
     margin: 15px;
     width: 300px;
@@ -162,11 +172,14 @@
 #display-score div h3{
     font-size: 0.8rem;
 }
+
+/* Opponent Choosing Text---------- */
 #opponent-chance h2{
     font-size: 1rem;
     font-weight: 400;
 }
 
+/* ----------Result Area---------- */
 .result-container{
     height: 180px;
 }
@@ -200,7 +213,8 @@
     width: 110px;
     box-shadow: 0px 3px #c08a25;
 }
-/* Utility classes */
+
+/* ----------Utility classes for Page2---------- */
 .primary-font-size{
     font-size: 1rem;
 }

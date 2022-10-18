@@ -1,8 +1,10 @@
+/* ----------Page 1 Design---------- */
 *{
     margin: 0px;
     padding: 0px;
     font-family: ubuntu;
 }
+/* ----------Variable for Sliding Bar in Choosing Area */
 :root{
     --sliding-translate : 0px;
 }
@@ -98,11 +100,13 @@ body{
     display: none;
 }
 
+/* ----------Logo---------- */
 nav{
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
+/* ----------Choosing Area---------- */
 #option-area{
     background-color: #1f3641;
     border-radius: 20px;
@@ -160,6 +164,7 @@ nav{
     background-color: transparent;
 }
 
+/* ----------Playing Type Buttons---------- */
 #playing-type{
     margin-top: 50px;
     width: 600px;
@@ -185,7 +190,7 @@ nav{
     background-color: #56e6e1;
 }
 
-/* Utility Classes */
+/* ----------Utility Classes---------- */
 .primary-logo{
     z-index: 2;
     width: 45px;
@@ -207,6 +212,7 @@ nav{
     box-shadow: 0px 8px #259591 ;
 }
 
+/* ----------Searching For Players---------- */
 #pvp{
     position: absolute;
     top: 0px;
@@ -294,6 +300,7 @@ nav{
     }
 }
 
+/* ----------Dot Pulse Animation---------- */
 .dot-pulse {
     position: relative;
     left: -9999px;

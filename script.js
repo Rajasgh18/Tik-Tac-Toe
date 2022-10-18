@@ -1,8 +1,8 @@
-//Targetting CSS Variables
+//----------Targetting CSS Variables----------
 let r = document.querySelector(':root');
 let rs = getComputedStyle(r);
 
-// Sliding choosing button animation
+//----------Sliding choosing button animation----------
 let mainCross = document.querySelector('.option-cross');
 let mainCrossImg = document.querySelector('.option-cross img');
 
@@ -11,12 +11,12 @@ let mainCircleImg = document.querySelector('.option-circle img');
 
 let playerSelection = "cross";
 
-//Media Queries
+//----------Media Queries----------
 const mediaLarge = window.matchMedia('(max-width : 1200px) and (min-width : 700px)');
 const mediaSmall = window.matchMedia('(max-width : 700px) and (min-width : 450px)');
 const mediaVerySmall = window.matchMedia('(max-width : 450px)');
 
-// Main game screen 
+//----------Main game screen---------- 
 let styleSheet = document.getElementById('style-sheet');
 let page1 = document.getElementById('page1');
 let page2 = document.getElementById('page2');
@@ -47,7 +47,7 @@ let quit = document.querySelector('.result-quit');
 let nextRound = document.querySelector('.result-next');
 let flag;
 
-// Score Variables
+// ----------Score Variables----------
 let playerScore = document.querySelector('#player-score p');
 let tiesScore = document.querySelector('#ties-score p');
 let cpuScore = document.querySelector('#cpu-score p');
@@ -58,7 +58,7 @@ playerScore.innerHTML = playerpoint;
 tiesScore.innerHTML = tiespoint;
 cpuScore.innerHTML = cpupoint;
 
-//Main Game working variables
+//----------Main Game working variables----------
 let bothChoosedBtn = [];
 let userChoosedBtn = [];
 let cpuChoosedBtn = [];
@@ -73,13 +73,13 @@ let conditions = [
     [6,7,8]
 ];
 
-//Variables for Random Value
+//----------Variables for Random Value----------
 let a = 0;
 let b = 8;
 let mod;
 let a_to_b;
 
-
+//----------Function for CPU or User's Turn----------
 function chance(playerChance) {
     if(playerChance == 'cross'){
         playerTurn.src = './Images/Cross-light.svg';
@@ -90,12 +90,13 @@ function chance(playerChance) {
     }
 }
 
+//----------Main Event Listener for listing every event after DOM is Loaded----------
 document.addEventListener("DOMContentLoaded", () => {
     // --------------- PAGE 1 ---------------
-    // Page1 opening
+    // ----------Page1 opening----------
     page1.style.display = 'flex';
 
-    // Sliding bar
+    // ----------Sliding bar----------
     mainCircle.addEventListener('click', function() {
         setTimeout(()=>{
             mainCircleImg.src = './Images/Circle-dark.svg';
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playerSelection = 'cross'
     })  
 
-    // VS CPU button functions
+    // ----------VS CPU button functions----------
     vsCpu.addEventListener('click', () => {
         page1.style.animation = 'page-change 0.5s';
         setTimeout(() => {
@@ -180,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    // VS player button functions
+    // ----------VS player button functions----------
     vsPlayer.addEventListener('click', () => {
         pvp.style.display = 'flex';
         pvpContainer.style.animation = 'search-player 0.5s ease-in-out';
@@ -194,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // --------------- PAGE2 ---------------
-    // Navigation Restart button functions
+    // ----------Navigation Restart button functions----------
     restart.addEventListener('click', () => {
         restartPanel.style.display = 'flex';
         restartContainer.style.animation = 'search-player 0.5s ease-in-out';
@@ -209,9 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload(true);
     })
 
-
+    //----------Function for Every button choosed----------
     arr.forEach(e => {
         e.addEventListener('click', () => {
+            //----------Hover State Image Changer on user selection----------
             if(playerSelection == 'circle'){
                 // chance('circle');
                 e.innerHTML = `<img class = "hover-img" src = "./Images/Circle-logo.svg">`;
@@ -221,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 e.innerHTML = `<img class = "hover-img" src = "./Images/Cross-logo.svg">`;
             }
 
+            // ----------Stores Random value for cpu----------
             if(bothChoosedBtn.length < 9){
                 mod = Math.random();
                 a_to_b = Math.round(a + (b-a)*mod);
@@ -285,6 +288,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     chance('cross');
                 }
             }, 3000);
+
+            //----------It checks the condition for every selection----------
             for(let i = 0; i<8; i++){
                 let sumUser = 0;
                 let sumCpu = 0;
@@ -305,6 +310,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     })
                 })
+
+                //----------Checks for User----------
                 if (sumUser == 3){
                     flag = 'user';
                     console.log(winbtnUser);
@@ -322,6 +329,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                     break;
                 }
+
+                //----------Checks for CPU----------
                 else if (sumCpu == 3){
                     flag = 'cpu';
                     setTimeout(() => {
@@ -343,6 +352,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     },3000)
                     break;
                 }
+
+                //----------For Draw----------
                 else if(bothChoosedBtn.length == 9){
                     if(sumCpu != 3 && sumUser != 3){
                         flag = 'draw'; 
@@ -351,6 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
+            //----------It shows who's the winner----------
             switch(flag){
                 case 'user':
                     setTimeout(() => {
@@ -416,6 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })   
     })
 
+    //----------Result Area button functions----------
     quit.addEventListener('click', () =>{
         playerpoint = 0;
         tiespoint = 0;

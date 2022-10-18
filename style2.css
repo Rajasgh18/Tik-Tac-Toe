@@ -1,3 +1,4 @@
+/* -----------Page 2---------- */
 *{
     margin: 0px;
     padding: 0px;
@@ -58,6 +59,7 @@ body{
     }
 }
 
+/* ----------Navigation Bar---------- */
 nav{
     margin-top: 50px;
     width: 600px;
@@ -65,7 +67,6 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-
 #game-turn{
     width: 210px;
     height: 60px;
@@ -83,7 +84,6 @@ nav{
     width: 35px;
     height: 35px;
 }
-
 nav button{
     cursor: pointer;
     border-radius: 12px;
@@ -102,6 +102,7 @@ nav button img{
     height: 25px;
 }
 
+/* ----------Restart Area---------- */
 #restart-panel{
     z-index: 3;
     position: absolute;
@@ -113,6 +114,16 @@ nav button img{
     justify-content: center;
     align-items: center;
     display: none;
+}
+#restart-panel::before{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    background-color: black;
+    opacity: 0.69;
 }
 .restart-container{
     position: absolute;
@@ -159,18 +170,8 @@ nav button img{
 .restart-container button:nth-child(2):hover{
     background-color: #f5cd82;
 }
-#restart-panel::before{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    content: "";
-    background-color: black;
-    opacity: 0.69;
-}
 
-
+/* ----------Main Game Area---------- */
 #selection-area{
     margin-top: 30px;
     width: 600px;
@@ -214,6 +215,7 @@ nav button img{
     height: 100px;
 }
 
+/* ----------Score Board---------- */
 #display-score{
     margin-top: 30px;
     display: grid;
@@ -241,6 +243,7 @@ nav button img{
     background-color:#f2b137 ;
 }
 
+/* ----------Opponent Choosing Text---------- */
 #opponent-chance{
     width: 600px;
     margin-bottom: 20px;
@@ -254,6 +257,7 @@ nav button img{
     margin-right: 30px;
 }
 
+/* ----------Result Area---------- */
 #result{
     position: absolute;
     top: 0px;
@@ -305,7 +309,6 @@ nav button img{
     margin-left: 20px;
     color: #31c3bd;
 }
-
 .result-buttons button{
     cursor: pointer;
     width: 120px;
@@ -328,7 +331,6 @@ nav button img{
     border: 1px solid #f2b137;
     box-shadow:0px 5px #c08a25;
 }
-
 .result-next:hover{
     background-color: #f5cd82;
 }
@@ -350,7 +352,7 @@ nav button img{
     }
 }
 
-/* Utility classes */
+/* ----------Utility classes---------- */
 .primary-logo{
     width: 45px;
     height: 45px;
@@ -360,7 +362,7 @@ nav button img{
     font-weight: 600;
 }
 
-/* Dot Pulse animation */
+/* ----------Dot Pulse animation---------- */
 .dot-pulse {
     position: relative;
     left: -9999px;
